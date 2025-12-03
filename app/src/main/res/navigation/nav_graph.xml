@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/landingFragment">
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.gatetopay.onboardingapplication.fragments.LandingFragment"
+        android:label="fragment_landing"
+        tools:layout="@layout/fragment_landing">
+
+        <action
+            android:id="@+id/action_landingFragment_to_editableKYCFormFragment"
+            app:destination="@id/editableKYCFormFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_customerIdFragment"
+            app:destination="@id/customerIdFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_selfieInstructionsFragment"
+            app:destination="@id/selfieInstructionsFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_kycSubissionSuccessfulFragment"
+            app:destination="@id/kycSubissionSuccessfulFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editableKYCFormFragment"
+        android:name="com.gatetopay.onboardingapplication.fragments.EditableKYCFormFragment"
+        android:label="EditableKYCFormFragment"
+        tools:layout="@layout/fragment_kyc_form">
+        <action
+            android:id="@+id/action_editableKYCFormFragment_to_selectIdTypeFragment"
+            app:destination="@id/selectIdTypeFragment" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/ocrResultFragment"
+        android:name="com.gatetopay.onboardingapplication.fragments.OcrResultsFragment"
+        android:label="OcrResultFragment"
+        tools:layout="@layout/fragment_ocr_results">
+        <action
+            android:id="@+id/action_OcrResultFragment_to_selfieInstructionsFragment"
+            app:destination="@id/selfieInstructionsFragment" />
+        <action
+            android:id="@+id/action_OcrResultFragment_to_moreEditableKyc"
+            app:destination="@id/moreEditableKyc" />
+
+        <action
+            android:id="@+id/action_OcrResultFragment_to_selectIdTypeFragment"
+            app:destination="@id/selectIdTypeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/selfieInstructionsFragment"
+        android:name="com.gatetopay.onboardingapplication.fragments.SelfieInstructionsFragment"
+        android:label="SelfieInstructionsFragment"
+        tools:layout="@layout/fragment_selfie_instructions">
+        <action
+            android:id="@+id/action_selfieInstructionsFragment_to_imagesVerificationSuccessfulFragment"
+            app:destination="@id/imagesVerificationSuccessfulFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/integrationInfoFragment"
+        android:name="com.gatetopay.onboardingapplication.fragments.IntegrationInfoFragment"
+        android:label="FormByRiskIdFragment"
+        tools:layout="@layout/fragment_integration_info">
+
+        <action
+            android:id="@+id/action_IntegrationInfoFragment_to_selectIdTypeFragment"
+            app:destination="@id/selectIdTypeFragment" />
+        <action
+            android:id="@+id/action_IntegrationInfoFragment_to_moreEditableKyc"
+            app:destination="@id/moreEditableKyc" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/moreEditableKyc"
+        android:name="com.gatetopay.onboardingapplication.fragments.MoreEditableKYCFormFragment"
+        android:label="MoreEditableKyc"
+        tools:layout="@layout/fragment_kyc_form">
+        <action
+            android:id="@+id/action_MoreEditableKyc_to_kycSubissionSuccessfulFragment"
+            app:destination="@id/kycSubissionSuccessfulFragment" />
+        <action
+            android:id="@+id/action_FormByRiskIdFragment_to_formByRiskIdFragment"
+            app:popUpTo="@id/integrationInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/imagesVerificationSuccessfulFragment"
+        android:name="com.gatetopay.onboardingapplication.fragments.ImagesVerificationSuccessfulFragment"
+        android:label="ImagesVerificationSuccessfulFragment"
+        tools:layout="@layout/fragment_images_verification_successful">
+        <action
+            android:id="@+id/action_imagesVerificationSuccessfulFragment_to_moreEditableKyc"
+            app:destination="@id/moreEditableKyc" />
+        <action
+            android:id="@+id/action_imagesVerificationSuccessfulFragment_to_selfieInstructionsFragment"
+            app:popUpTo="@id/selfieInstructionsFragment" />
+        <action
+            android:id="@+id/action_imagesVerificationSuccessfulFragment_to_kycSubissionSuccessfulFragment"
+            app:destination="@id/kycSubissionSuccessfulFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/selectProductFragment"
+        android:name="com.gatetopay.onboardingapplication.fragments.SelectProductFragment"
+        android:label="SelectNationalityFragment"
+        tools:layout="@layout/fragment_kyc_form">
+
+        <action
+            android:id="@+id/action_SelectProductFragment_to_IntegrationInfoFragment"
+            app:destination="@id/integrationInfoFragment" />
+        <action
+            android:id="@+id/action_SelectProductFragment_to_MoreEditableKyc"
+            app:destination="@id/moreEditableKyc" />
+        <action
+            android:id="@+id/action_SelectProductFragment_to_SelectIdTypeFragment"
+            app:destination="@id/selectIdTypeFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/selectIdTypeFragment"
+        android:name="com.gatetopay.onboardingapplication.fragments.SelectIdTypeFragment"
+        android:label="SelectIdTypeFragment"
+        tools:layout="@layout/fragment_integration_info">
+        <action android:id="@+id/action_SelectIdTypeFragment_to_ocrResultFragment"
+            app:destination="@id/ocrResultFragment" />
+        <action android:id="@+id/action_SelectIdTypeFragment_to_moreKycFragment"
+            app:destination="@id/moreEditableKyc" />
+        <action android:id="@+id/action_SelectIdTypeFragment_to_selfieInstructionsFragment"
+            app:destination="@id/selfieInstructionsFragment" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/kycSubissionSuccessfulFragment"
+        android:name="com.gatetopay.onboardingapplication.fragments.KycSubmissionSuccessfulFragment"
+        android:label="KycSubissionSuccessfulFragment"
+        tools:layout="@layout/fragment_kyc_submission_successful">
+        <action
+            android:id="@+id/action_kycSubissionSuccessfulFragment_to_landingFragment"
+            app:popUpTo="@id/landingFragment" />
+        <action
+            android:id="@+id/action_kycSubissionSuccessfulFragment_to_customerIdFragment"
+            app:popUpTo="@id/customerIdFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customerIdFragment"
+        android:name="com.gatetopay.onboardingapplication.fragments.CustomerIdFragment"
+        android:label="CustomerIdFragment"
+        tools:layout="@layout/fragment_customer_id">
+        <action
+            android:id="@+id/action_customerIdFragment_to_kycSubissionSuccessfulFragment"
+            app:destination="@id/kycSubissionSuccessfulFragment" />
+        <action
+            android:id="@+id/action_customerIdFragment_to_selfieInstructionsFragment"
+            app:popUpTo="@id/selfieInstructionsFragment" />
+        <action
+            android:id="@+id/action_customerIdFragment_to_kycSubissionSuccessfulFragment2"
+            app:destination="@id/kycSubissionSuccessfulFragment" />
+    </fragment>
+
+</navigation>

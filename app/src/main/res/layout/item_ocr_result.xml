@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/extractedFieldNameLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/extractedFieldValueLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Extracted field name" />
+
+        <TextView
+            android:id="@+id/extractedFieldName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/extractedFieldNameLabel"
+            app:layout_constraintStart_toStartOf="@id/extractedFieldNameLabel"
+            app:layout_constraintTop_toBottomOf="@id/extractedFieldNameLabel"
+            tools:text="Name here" />
+
+        <TextView
+            android:id="@+id/extractedFieldValueLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/extractedFieldNameLabel"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Extracted field value" />
+
+        <TextView
+            android:id="@+id/extractedFieldValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/extractedFieldValueLabel"
+            app:layout_constraintStart_toStartOf="@id/extractedFieldValueLabel"
+            app:layout_constraintTop_toBottomOf="@id/extractedFieldValueLabel"
+            tools:text="Value here" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

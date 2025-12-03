@@ -1,0 +1,20 @@
+<resources>
+    <string name="btn_create_account">Start</string>
+    <string name="btn_verify">Verify</string>
+
+    <string name="title_verify_mobile">Verify your mobile number</string>
+
+    <string name="hint_enter_mobile_number">Enter your mobile number</string>
+    <string name="hint_mobile_format">07XXXXXXXX</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="kyc_error_message">Kyc Form has errors</string>
+    <string name="this_field_is_required">"This field is requierd "</string>
+    <string name="invalid_input_format">Invalid Input Format</string>
+    <array name="id_types">
+
+        <item>National ID</item>
+        <item>Passport</item>
+    </array>
+
+</resources>
