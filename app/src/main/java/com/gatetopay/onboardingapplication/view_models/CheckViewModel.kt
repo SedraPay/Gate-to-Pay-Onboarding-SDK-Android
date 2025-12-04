@@ -112,10 +112,8 @@ class CheckViewModel : ViewModel() {
         //object, we recommend to keep it in the ViewModel and use it across your code
         sc = sc ?: GateToCheckEngine.Builder()
             .subscriptionKey(subscriptionKey)
-            .appID("")
             .nationalID(nationalNumber)
             .riskID(riskNumber)
-            .isOcrEnabled(isNeedOCR)
             .baseUrl(baseUrl)
             .build()
 
